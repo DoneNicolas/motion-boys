@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-Order | Motion Boys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .form-container {
+      background: #111;
+      padding: 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Pre-Order Form</h2>
+    <form action="https://formspree.io/f/xjvnvjwj" method="POST">
+      <input type="text" name="name" placeholder="Numele tău" required>
+      <input type="email" name="email" placeholder="Emailul tău" required>
+      <textarea name="message" rows="5" placeholder="Mesajul tău (model, mărime, etc.)" required></textarea>
+      <button type="submit">Trimite</button>
+    </form>
+  </div>
+</body>
+</html>

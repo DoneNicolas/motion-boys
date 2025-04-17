@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intrare Motion Boys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      background: #111;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    button {
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ccc;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .socials a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 8px 16px;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    .socials a:hover {
+      background: #fff;
+      color: #000;
+    }
+    .follow-msg {
+      margin-top: 30px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Intrare Motion Boys</h1>
+    <input type="password" id="password" placeholder="Introdu parola" />
+    <button onclick="checkPassword()">Intră</button>
+    <p class="error" id="errorMsg"></p>
+  </div>
+
+  <p class="follow-msg">Dacă nu știi parola, urmărește-ne pe:</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/wearemotionboyz?igsh=MWNrYzkzY3prdGUwYg==" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@wearemotionvlogs?si=RbXveEFhDoxLOhgH" target="_blank">YouTube</a>
+    <a href="https://www.tiktok.com/@motionboys1?_t=ZN-8vbuxolINzK&_r=1" target="_blank">TikTok</a>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      const errorMsg = document.getElementById('errorMsg');
+      if (password === 'motion') {
+        window.location.href = 'home.html';
+      } else {
+        errorMsg.textContent = 'Parolă greșită. Încearcă din nou.';
+      }
+    }
+  </script>
+</body>
+</html>
